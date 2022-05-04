@@ -9,6 +9,8 @@ namespace NZWalks.API.Profiles
         public AutoMapperProfile()
         {
             CreateMap<Region, RegionDto>();
+            CreateMap<AddRegionRequest, Region>();
+            CreateMap<UpdateRegionRequest, Region>();
         }
     }
 }
