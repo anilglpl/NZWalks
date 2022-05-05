@@ -57,10 +57,10 @@ namespace NZWalks.API.Controllers
         public async Task<IActionResult> AddWalkAsync([FromBody] AddWalkRequest addWalkRequest)
         {
             // Validate the incoming request
-            if (!(await ValidateAddWalkAsync(addWalkRequest)))
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!(await ValidateAddWalkAsync(addWalkRequest)))
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             // Convert DTO to Domain Object
             var walkDomain = new Models.Domain.Walk
@@ -95,10 +95,10 @@ namespace NZWalks.API.Controllers
             [FromBody] Models.DTO.UpdateWalkRequest updateWalkRequest)
         {
             // Validate the incoming request
-            if (!(await ValidateUpdateWalkAsync(updateWalkRequest)))
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!(await ValidateUpdateWalkAsync(updateWalkRequest)))
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             // Convert DTO to Domain object
             var walkDomain = new Models.Domain.Walk
