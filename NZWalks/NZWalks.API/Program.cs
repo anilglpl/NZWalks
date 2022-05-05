@@ -14,9 +14,9 @@ builder.Services.AddDbContext<NZWalksDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalks"))
 );
 builder.Services.AddScoped<IRegionRepository,RegionRepository>();
-
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
-
+builder.Services.AddScoped<IWalkRepository, WalkRepository>();
+builder.Services.AddScoped<IWalkDifficultyRepository, WalkDifficultyRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
